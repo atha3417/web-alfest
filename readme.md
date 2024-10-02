@@ -1,5 +1,12 @@
 # ALFEST 2023 Website
 
+ALFEST atau As-Syifa League Festival merupakan festival tahunan yang diselenggarakan oleh SMAIT AS-Syifa Boarding School Wanareja sejak tahun 2019.
+
+ALFEST hadir sebagai sarana penyaluran bakat dan kemampuan pemuda-pemudi masa kini agar menjadi lebih produktif, kreatif, dan inovatif melalui ajang kompetisi antar sekolah bertaraf nasional serta berbagai seminar edukatif dan inspiratif.
+
+Dengan berisikan lomba-lomba yang dikategorikan dalam 2 kelompok, yaitu lomba online dan offline serta talkshow yang diisi oleh guest star yang spektakuler, ALFEST siap kembali menyambut pemuda pemudi nusantara.
+
+Saya ditugaskan untuk membuat website untuk menampilkan informasi tentang acara tersebut.
 Website ini merupakan platform untuk festival perlombaan ALFEST 2023. Di dalamnya, pengguna dapat melihat berbagai lomba yang tersedia dan membaca penjelasan mengenai festival ALFEST itu sendiri. Website ini juga dilengkapi dengan fitur pendaftaran untuk peserta.
 
 ## Fitur Utama
