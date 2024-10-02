@@ -13,7 +13,7 @@ Website ini merupakan platform untuk festival perlombaan ALFEST 2023. Di dalamny
 1. Clone repository ini ke dalam direktori lokal Anda.
 2. Import database dari file `pendaftar.sql` yang sudah disediakan:
     ```
-    mysql -u username -p database_name < pendaftar.sql
+    mysql -u username -p pendaftar < pendaftar.sql
     ```
 3. Sesuaikan credential database pada file `putra/config.php` sesuai dengan pengaturan lokal Anda.
 4. Pastikan web server Anda sudah terkonfigurasi dan siap untuk menjalankan PHP.
