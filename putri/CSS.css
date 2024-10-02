@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'compote free';
+    src: url(compotefree.ttf);
+    font-style: normal;
+  }
+
+body {
+  font-family: 'compote free';
+  font-weight: 100;
+}
+
+.background-image {
+  background-image: url(./Image/IMG_1465.PNG);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.background-image1 {
+  background-image: url(./Image/IMG_1470.PNG);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.background-image2 {
+  background-image: url(./Image/IMG_1468.PNG);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background-image4 {
+  background-image: url(./Image/IMG_1469.PNG);
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'compote free';
+    src: url('../assets/font/compotefree.ttf');
+}
+
+@font-face {
+    font-family: 'century gothic bold';
+    src: url('../assets/font/gothicb.ttf');
+}
+
+@font-face {
+    font-family: 'amita bold';
+    src: url('../assets/font/Amita-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'aclonica regular';
+    src: url('../assets/font/Aclonica-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'spacegrotesk';
+    src: url('../assets/font/SpaceGrotesk.ttf');
+}
+
+.subtitle {
+    @apply text-4xl lg:text-5xl font-bold font-['compote_free'] text-wood text-center mb-8;
+}
+
+#body {
+    background: rgb(0, 191, 255);
+    background: linear-gradient(
+        180deg,
+        rgba(0, 191, 255, 1) 0%,
+        rgba(79, 186, 249, 1) 4%,
+        rgba(129, 207, 252, 1) 11%,
+        rgba(135, 206, 250, 1) 19%,
+        rgba(126, 208, 253, 1) 26%,
+        rgba(150, 204, 232, 1) 39%,
+        rgba(165, 191, 203, 1) 50%,
+        rgba(177, 177, 168, 1) 65%,
+        rgba(193, 166, 138, 1) 100%
+    );
+}
+
+.square {
+    @apply w-full;
+    height: 150px;
+    background: #fff;
+}
+
+.content {
+    @apply text-content text-[13px] lg:text-[18px] font-['century_gothic_bold'] font-bold;
+}
+
+.flip-horizontal {
+    transform: scaleX(-1);
+}
+
+.flip-vertical {
+    transform: scaleY(-1);
+}
+
+.online,
+.offline {
+    @apply mascot max-w-[260px] mx-auto md:max-w-[250px] hover:scale-125;
+}
+
+.mascot {
+    @apply relative w-[100%] transition duration-700;
+}
+
+.mascot-img {
+    @apply w-[100%] h-auto transition duration-700;
+}
+
+.rulebook {
+    @apply opacity-90 group-hover:opacity-100 bg-white text-center text-black px-4 py-2 rounded-3xl font-semibold transition !duration-[900ms] text-sm ease-in-out;
+}
+
+/*#sponsorship {*/
+/*    background-image: url('../../assets/img/mpa.jpg');*/
+/*    background-position: center;*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: cover;*/
+/*    min-height: 200vh;*/
+/*    height: 200vh;*/
+/*    max-height: 200vh;*/
+/*}*/
+
+#contact {
+    background-image: url('../../assets/img/ldi.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500vh;
+    height: 500vh;
+    max-height: 500vh;
+}
+
+.sponsor-s {
+    @apply w-16;
+}
+
+.sponsor-m {
+    @apply w-24;
+}
+
+.sponsor-l {
+    @apply w-36;
+}
+
+.sponsor-xl {
+    @apply w-52;
+}
+
+.btn {
+    @apply inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out cursor-pointer;
+}
+
+.fw-bold {
+    @apply !font-bold;
+}
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    @apply w-[245px] h-[170px] md:w-[400px] md:h-[250px];
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    @apply w-[245px] h-[170px] md:w-[400px] md:h-[250px];
+}

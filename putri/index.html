@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALFEST 23</title>
+    <link rel="shortcut icon" href="Image/2022-08-17.png" type="image/x-icon">
+    <!-- Font -->
+    <link rel="stylesheet" type="text/css" href="CSS.css">
+    <!-- css tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- alpine js -->
+    <script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script>
+    <!-- videojs -->
+    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+    <!-- swiperjs -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+</head>
+    <body x-data="{open: false}" class="tracking-widest">
+        <!-- wraper 1 -->
+        <div class="overflow-hidden background-image">
+            <div class="relative pt-6 pb-16 sm:pb-24 lg:pb-32">
+                <!-- navbar -->
+                <div>
+                    <nav class="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6" aria-label="Global">
+                        <div class="flex items-center flex-1">
+                            <div class="flex items-center justify-between w-full md:w-auto">
+                                <a class="flex items-center"
+                                    href="https://www.alfestofficial.com/" target="_blank">
+                                    <img class="h-8 mr-4 w-auto sm:h-10" src="Image/image (3).png" alt="">
+                                    <span class="text-3xl font-semibold">ALFEST '23</span>
+                                </a>
+                                <div class="-mr-2 flex items-center md:hidden">
+                                    <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false"
+                                        @click="open = true"
+                                    >
+                                        <span class="sr-only">Open main menu</span>
+                                        <!-- Heroicon name: outline/menu -->
+                                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden md:block md:ml-10 md:space-x-10">
+                            <a href="#Home" class="font-medium text-white-500 hover:text-green-900">HOME</a>
+                            <a href="#Competition" class="font-medium text-white-500 hover:text-green-900">COMPETITION</a>
+                            <a href="#Lodging" class="font-medium text-white-500 hover:text-green-900">LODGING</a>
+                            <a href="#Contact" class="font-medium text-white-500 hover:text-green-900">CONTACT</a>
+                        </div>
+                        <!-- <div class="hidden md:block text-right">
+                            <span class="inline-flex rounded-md shadow-md ring-1 ring-black ring-opacity-5">
+                            <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50"> Log in </a>
+                            </span>
+                        </div> -->
+                    </nav>
+            
+                    <div class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+                        x-show="open"
+                        x-transition:enter="transition ease-out duration-150"
+                        x-transition:enter-start="opacity-0 scale-95"
+                        x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="transition ease-in duration-100"
+                        x-transition:leave-start="opacity-100 scale-100"
+                        x-transition:leave-end="opacity-0 scale-95"
+                    >
+                        <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+                            <div class="px-5 pt-4 flex items-center justify-between">
+                                <div class="flex">
+                                    <img class="h-8 mr-4 w-auto sm:h-10" src="Image/image (3).png" alt="">
+                                    <span class="text-3xl font-semibold">ALFEST '23</span>
+                                </div>
+                            <div class="-mr-2">
+                                <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                                    @click="open = false"
+                                >
+                                    <span class="sr-only">Close main menu</span>
+                                    <!-- Heroicon name: outline/x -->
+                                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
+                            </div>
+                            </div>
+                            <div class="px-2 pt-2 pb-3 space-y-1">
+                                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
+                                    HOME
+                                </a>
+                                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
+                                    COMPETITION
+                                </a>
+                                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
+                                    LODGING
+                                </a>
+                                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
+                                    CONTACT
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- hero section -->
+                <main class="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6 lg:mt-32 w-full">
+                    <div class="flex flex-wrap-reverse lg:grid lg:grid-cols-12 lg:gap-8">
+                        <div class="sm:text-center flex flex-col w-full items-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-right">
+                            <h1 class="p-8 flex items-center">
+                                <img src="Image/2022-08-17.png" class="h-32 w-32">
+                                <span class="block text-6xl tracking-tight font-bold sm:text-5xl xl:text-6xl">
+                                    ALFEST '23
+                                </span>
+                            </h1>
+                            <div class="mt-3 text-center text-5xl sm:mt-5 lg:text-4xl xl:text-5xl">
+                                <div>Merapah Dikara</div>
+                                <div>Negeri Berkisah</div> 
+                            </div>
+                        </div>
+                        <div class="mt-12 w-full relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
+                            <div class="relative mx-auto w-full rounded-lg shadow-lg">
+                                <div class="relative block w-full bg-white rounded-lg overflow-hidden focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                    <video class="video" width="100%" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline">
+                                        <source src="./Image/teaser.mp4" type="video/mp4" />
+                                    </video>
+                                    <a class="absolute inset-0 w-full h-full flex items-center justify-center"
+                                        href="https://youtu.be/t3ANZUEhf4Y" target="_blank">
+                                        <svg class="h-20 w-20 text-red-500" fill="currentColor" viewBox="0 0 84 84">
+                                            <circle opacity="0.9" cx="42" cy="42" r="42" fill="white" />
+                                            <path d="M55.5039 40.3359L37.1094 28.0729C35.7803 27.1869 34 28.1396 34 29.737V54.263C34 55.8604 35.7803 56.8131 37.1094 55.9271L55.5038 43.6641C56.6913 42.8725 56.6913 41.1275 55.5039 40.3359Z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+
+        <!-- Wraper 2 -->
+        <div class="aspect-video pt-20 mx-auto md:px-16 background-image1" id="Competition">
+            <!-- Judul -->
+            <div class="text-center text-3xl md:text-6xl mt-15 p-4 uppercase">
+                Competition 
+            </div>
+            <!-- Keterangan -->
+            <div class="text-center text-xl mt-5 pt-10">
+                ALFEST 2023 hadir dengan 20 mata lomba 12 lomba offline dan 8 lomba online
+            </div>
+            <!-- Button -->
+            <div class="container flex justify-center">
+                <!-- Online -->
+                <div class="mr-4">
+                    <button class="transition text-white ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                        onclick="window.open('https://drive.google.com/file/d/1a_1dKz77FxF0wNgIKtd4P-AOs3EKrPLi/view?usp=share_link', '_blank').focus();"
+                    >
+                        Rulebook Online
+                    </button> 
+                </div>
+                <!-- Offline -->
+                <div class="ml-4">
+                    <button class="transition text-white ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                        onclick="window.open('https://drive.google.com/file/d/14dvFvPrexaCtn0zwkcoLlIRpzb7v4w-l/view?usp=share_link', '_blank').focus();"
+                    >
+                        Rulebook Offline
+                    </button> 
+                </div>
+            </div>
+            <!-- Maskot Lomba -->
+            <div class="flex mt-8 justify-between cursor-point group" >
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <!-- ADML -->
+                            <div class="duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
+                                <img src="Image/A day in my life.png" class="h-48 w-48 mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                                <div class="container flex-col flex justify-center my-4 w-40 mx-auto">
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('https://drive.google.com/file/d/15bVc3Vw0Jlypd7mar53pdSSAEPDHncXd/view?usp=share_link', '_blank').focus();"
+                                    >
+                                    Rulebook
+                                    </button> 
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSf3OxxwrQr9YkmI7pALNzB580b88lyQRsACEUCvThlux4Mz0Q/viewform?usp=share_link', '_blank').focus();"
+                                    >
+                                    Register
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- Essay -->
+                            <div class="duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100"> 
+                                <img src="Image/essay.png" class="h-48 w-48 mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                                <div class="container flex-col flex justify-center my-4 w-40 mx-auto">
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('https://drive.google.com/file/d/1ALFI_Zv6lHt5xrRNb3XQ_9fJXpfrEK49/view?usp=share_link', '_blank').focus();"
+                                    >
+                                    Rulebook
+                                    </button> 
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScL8hIwQikmCD16eda6wjlMUqYHjNS1y4soxgfBjmtSClW-vw/viewform?usp=share_link', '_blank').focus();"
+                                    >
+                                    Register
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- Fotografi -->
+                            <div class="duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
+                                <img src="Image/forografi..png" class="h-48 w-48 mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                                <div class="container flex-col flex justify-center my-4 w-40 mx-auto">
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('https://drive.google.com/file/d/1ZHxcm4BVrrHxRxvKv4BtaRyqtocUU0tN/view?usp=share_link', '_blank').focus();"
+                                    >
+                                    Rulebook
+                                    </button> 
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfw3YduLrjEby_2QOvXcuZWYaMQVHZ8zGnItMLm3msGUuB6Bw/viewform?usp=share_link', '_blank').focus();"
+                                    >
+                                    Register
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- KIR -->
+                            <div class="duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
+                                <img src="Image/kir.png" class="h-48 w-48 mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                                <div class="container flex-col flex justify-center my-4 w-40 mx-auto">
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('https://drive.google.com/file/d/14zeNpkWEmwQ_wnWq3BJaSsAIgp0Jc8kx/view?usp=share_link', '_blank').focus();"
+                                    >
+                                    Rulebook
+                                    </button> 
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfP45zi_FBt4VcOeqfbXgO3TtzDvU-067pvvw1f5aeXB8hR8g/viewform?usp=share_link', '_blank').focus();">
+                                    Register
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- Poster Digital -->
+                            <div class="duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
+                                <img src="Image/poster.png" class="h-48 w-48 mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                                <div class="container flex-col flex justify-center my-4 w-40 mx-auto">
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('https://drive.google.com/file/d/1WTLVGSedsvf8jmEeEDnfQ1evlbDLXFaz/view?usp=share_link', '_blank').focus();"
+                                    >
+                                    Rulebook
+                                    </button> 
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfsjGCt_IqRpjDEDR5aQqAXXG8ABlHWHx2B3PPFqflNN8M1UQ/viewform?usp=share_link', '_blank').focus();"
+                                    >
+                                    Register
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- Speech -->
+                            <div class="duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
+                                <img src="Image/speech.png" class="h-48 w-48 mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                                <div class="container flex-col flex justify-center my-4 w-40 mx-auto">
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('https://drive.google.com/file/d/1GIZWQHhiIAY9Ha5X7Jv3h3XDeuYAnOSz/view?usp=share_link', '_blank').focus();"
+                                    >
+                                    Rulebook
+                                    </button> 
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdBtUrOlPUc_vV3ZiPYIx7utPtcTE-iiynthsCtDs8ycCzvuw/viewform?usp=share_link', '_blank').focus();"
+                                    >
+                                    Register
+                                    </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- AFD -->
+                        <div class="duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
+                            <img src="Image/ootd.png" class="h-48 w-48 mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                            <div class="container flex-col flex justify-center my-4 w-40 mx-auto">
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('https://drive.google.com/file/d/1S-ZMvT6HsVWVEQlo-SDF_Cin1M8FQ8Ku/view?usp=share_link', '_blank').focus();"
+                                    >
+                                    Rulebook
+                                    </button> 
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfngqnNuTkpEwZHBHw8BL703MUUhFhWGejAaQbhDOSx3ENArw/viewform?usp=share_link', '_blank').focus();"
+                                    >
+                                    Register
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- LDBI -->
+                            <div class="duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
+                                <img src="Image/Debat.png" class="h-48 w-48 mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                                <div class="container flex-col flex justify-center my-4 w-40 mx-auto">
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('https://drive.google.com/file/d/10VWF2lMPQ-NII7RD4ZeAIOIBYZQyyZjx/view?usp=share_link', '_blank').focus();"
+                                    >
+                                    Rulebook
+                                    </button> 
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('registration/', '_blank').focus();"
+                                    >
+                                    Register
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- LKBB -->
+                            <div class="duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
+                                <img src="Image/lkbb.png" class="h-48 w-48 mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                                <div class="container flex-col flex justify-center my-4 w-40 mx-auto">
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('https://drive.google.com/file/d/1b0dO5cJRA_WPKucUJUDondp0EXK39IWO/view?usp=share_link', '_blank').focus();"
+                                    >
+                                    Rulebook
+                                    </button> 
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('registration/', '_blank').focus();"
+                                    >
+                                    Register
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- Dai -->
+                            <div class="duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
+                                <img src="Image/dai.png" class="h-48 w-48 mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                                <div class="container flex-col flex justify-center my-4 w-40 mx-auto">
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('https://drive.google.com/file/d/1dZnkN6xy4uXoxagGFaPxpAiLwNOZdKXW/view?usp=share_link', '_blank').focus();"
+                                    >
+                                    Rulebook
+                                    </button> 
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('registration/', '_blank').focus();"
+                                    >
+                                    Register
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- Tari -->
+                            <div class="duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
+                                <img src="Image/tari.png" class="h-48 w-48 mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                                <div class="container flex-col flex justify-center my-4 w-40 mx-auto">
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('https://drive.google.com/file/d/1EL-_N-YwfwtlrpSaez6NRJ83YE0t3r4v/view?usp=share_link', '_blank').focus();"
+                                    >
+                                    Rulebook
+                                    </button> 
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('registration/', '_blank').focus();"
+                                    >
+                                    Register
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- Stortel -->
+                            <div class="duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
+                                <img src="Image/Stortel .png" class="h-48 w-48 mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                                <div class="container flex-col flex justify-center my-4 w-40 mx-auto">
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('https://drive.google.com/file/d/1of2HOLDgMBwM9Ryx6OUFPR_aospR7m1Y/view?usp=share_link', '_blank').focus();"
+                                    >
+                                    Rulebook
+                                    </button> 
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('registration/', '_blank').focus();"
+                                    >
+                                    Register
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- Mewarnai -->
+                            <div class="duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
+                                <img src="Image/mewarnai.png" class="h-48 w-48 mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                                <div class="container flex-col flex justify-center my-4 w-40 mx-auto">
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('https://drive.google.com/file/d/1b1gmblGxd6x0fsfqL0OxzkdydMnn3l1J/view?usp=share_link', '_blank').focus();"
+                                    >
+                                    Rulebook
+                                    </button> 
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('registration/', '_blank').focus();"
+                                    >
+                                    Register
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- MHQ -->
+                            <div class="duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
+                                <img src="Image/M Tq.png" class="h-48 w-48 mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                                <div class="container flex-col flex justify-center my-4 w-40 mx-auto">
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('https://drive.google.com/file/d/1H8gDoqvXrRnsVCG3mUfidjwnY_6oL5aq/view', '_blank').focus();"
+                                    >
+                                    Rulebook
+                                    </button> 
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('registration/', '_blank').focus();"
+                                    >
+                                    Register
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- MTQ -->
+                            <div class="duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
+                                <img src="Image/mhq.png" class="h-48 w-48 mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                                <div class="container flex-col flex justify-center my-4 w-40 mx-auto">
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('https://drive.google.com/file/d/1rk5ML4LXjWK27ksMTFCBTfJlHumwwrWA/view?usp=share_link', '_blank').focus();"
+                                    >
+                                    Rulebook
+                                    </button> 
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('registration/', '_blank').focus();"
+                                    >
+                                    Register
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- Poetri -->
+                            <div class="duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
+                                <img src="Image/poetri.png" class="h-48 w-48 mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                                <div class="container flex-col flex justify-center my-4 w-40 mx-auto">
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('https://drive.google.com/file/d/10VsceebX_Oc8qK69wUbjG8wLJFwnq4T9/view?usp=share_link', '_blank').focus();"
+                                    >
+                                    Rulebook
+                                    </button> 
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('registration/', '_blank').focus();"
+                                    >
+                                    Register
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- TS -->
+                            <div class="duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
+                                <img src="Image/ts.png" class="h-48 w-48 mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                                <div class="container flex-col flex justify-center my-4 w-40 mx-auto">
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('https://drive.google.com/file/d/10tNB7ZlkzH-l0f5dcNiFRfFryIVvoYEZ/view?usp=share_link', '_blank').focus();"
+                                    >
+                                    Proposal
+                                    </button> 
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('registration/', '_blank').focus();"
+                                    >
+                                    Register
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- LLAI -->
+                            <div class="duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
+                                <img src="Image/llai rill.png" class="h-48 w-48 mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                                <div class="container flex-col flex justify-center my-4 w-40 mx-auto">
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('https://drive.google.com/file/d/12fLRcfzZlVIltlUBkK3eiVBWgzjhgM1u/view?usp=share_link', '_blank').focus();"
+                                    >
+                                    Rulebook
+                                    </button> 
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('registration/', '_blank').focus();"
+                                    >
+                                    Register
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- CCI -->
+                            <div class="duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
+                                <img src="Image/cci.png" class="h-48 w-48 mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                                <div class="container flex-col flex justify-center my-4 w-40 mx-auto">
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('https://drive.google.com/file/d/1vinWFQyOqv3H-eU0ezshk1YXLerfe2eM/view?usp=share_link', '_blank').focus();"
+                                    >
+                                    Rulebook
+                                    </button> 
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('registration/', '_blank').focus();"
+                                    >
+                                    Register
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- Solo Vocal -->
+                            <div class="duration-500 group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100">
+                                <img src="Image/nyanyi.png" class="h-48 w-48 mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                                <div class="container flex-col flex justify-center my-4 w-40 mx-auto">
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('https://drive.google.com/file/d/1EuF13XTDRY60ZMiiFxGEMyJYK-4jrum1/view?usp=share_link', '_blank').focus();"
+                                    >
+                                    Rulebook
+                                    </button> 
+                                    <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                                    type="button" onclick="window.open('registration/', '_blank').focus();"
+                                    >
+                                    Register
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wraper 3 -->
+        <div class="aspect-video py-20 mx-auto md:px-16 background-image2" id="Lodging">
+            <!-- Judul -->
+            <div class="text-center text-3xl md:text-6xl mt-15 p-4 uppercase">
+                Lodging 
+            </div>
+            <!-- Keterangan -->
+            <div class="text-center text-xl p-4 mt-5 pt-10">
+            Alfest putri 2023 menyediakan penginapan gratis untuk para peserta yang mengikuti perlombaan offline.
+            Penyediaan penginapan hanya diperuntukkan bagi sekolah yang berada di luar radius 50 km dari As-Syfa Boarding School Wanareja dan hanya diperbolehkan bagi tamu dan peserta perempuan (Akhwat).
+            </div>
+            <!-- Button -->
+            <div class="container mt-4 flex justify-center">
+                <button class="transition ease-in-out delay-150 bg-green-800  hover:-translate-y-1 hover:scale-110 hover:bg-green-300 duration-300 rounded mt-4 p-3"
+                type="button" onclick="window.open('https://forms.gle/AsTy217KdZgoU4Eg8', '_blank').focus();"
+                >
+                    Book Now
+                </button>
+            </div>
+        </div>
+
+        <!-- wrapper 4 -->
+        <div class="py-16 px-4 background-image4" id="Contact">
+            <div class="w-full max-w-7xl mx-auto md:flex md:justify-evenly">
+                <div class="mt-10">
+                    <h2 class="">
+                        CONTACT US
+                    </h2>
+                    <ul class="py-4 space-y-4">
+                        <li>
+                            <a class="flex items-center"
+                                href="https://wa.me/6282121333433"
+                                target="_blank">
+                                <svg class="h-9 w-9 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                    <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+                                </svg>
+                                0821-2133-3433 (Hilma)
+                            </a>          
+                        </li>
+                        <li>
+                            <a class="flex items-center"
+                                href="mailto:alfestlomba23@gmail.com" 
+                                target="_blank">
+                                <svg class="h-9 w-9 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+                                </svg>
+                                alfestlomba23@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-10">
+                    <h2 class="">
+                        FOLLOW US
+                    </h2>
+                    <ul>
+                        <li>
+                            <a href="https://www.instagram.com/alfestputri/" target="_blank" class="text-base flex items-center">
+                                <svg class="h-8 w-8 mt-4 text-md" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                    <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+                                </svg>
+                                <h1 class="mx-4 mt-3">@alfestputri</h1>
+                            </a>
+                        </li>
+                        <li >
+                            <a href="https://www.youtube.com/@AssyifaLFestival" target="_blank" class="text-base flex items-center">
+                                <svg class="h-8 w-8 mt-4 text-md" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                    <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/>
+                                </svg>
+                                <h1 class="mx-4 mt-3">Assyifa L Festival</h1>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/official_alfest" target="_blank" class="text-base flex items-center">
+                                <svg class="h-8 w-8 mt-4 text-md" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/>
+                                </svg>
+                                <h1 class="mx-4 mt-3">@official_alfest</h1>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.tiktok.com/@assyifaleaguefestival" target="_blank" class="text-base flex items-center">
+                                <svg class="h-8 w-8 mt-4 text-md" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                    <path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/>
+                                </svg>
+                                <h1 class="mx-4 mt-3">@assyifaleaguefestival</h1>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- wraper 5 location -->
+        <div class="aspect-video pt-20 px-4 lg:flex mx-auto md:px-16 background-image4" id="Lodging">
+            <!-- Judul -->
+            <div>
+                <h2 class="text-center lg:text-left text-3xl md:text-6xl mt-15 mb-4">
+                    OUR LOCATION
+                </h2>
+                <p class="text-center lg:pl-4 lg:text-left">
+                    Blok Lw. Peuris RT/RW 07/02, Wanareja, Kec. Subang, Kabupaten Subang, Jawa Barat 41211
+                </p>  
+            </div>
+            <div class="mt-11 lg:mt-0 flex justify-center w-full overflow-hidden">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15854.612831350798!2d107.820011!3d-6.565382!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xce47676c19935ae8!2sAs%20Syifa%20Boarding%20School%20Wanareja%20Subang!5e0!3m2!1sen!2sid!4v1671171499335!5m2!1sen!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+            </div>
+        </div>
+        
+        <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                loop: true,
+                autoplay: {
+                    delay: 1,
+                    disableOnInteraction: false
+                },
+                breakpoints:{
+                    300: {
+                        slidesPerView: 2,
+                        spaceBetween: 10,
+                    },
+                    640: {
+                        slidesPerView: 3,
+                        spaceBetween: 10
+                    },
+                    1024: {
+                        slidesPerView: 4,
+                        spaceBetween: 10
+                    },
+                    1366: {
+                        slidesPerView: 5,
+                        spaceBetween: 10
+                    },
+                },
+                freeMode: true,
+                speed: 1500,
+                grabCursor: true,
+            });
+        </script>
+    </body>
+</html>

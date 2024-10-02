@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'compote free';
+    src: url('/assets/font/compotefree.ttf');
+}
+
+@font-face {
+    font-family: 'century gothic bold';
+    src: url('/assets/font/gothicb.ttf');
+}
+
+.font-compote {
+    font-family: 'compote free';
+    /* margin-left: 0.7rem; */
+}
+
+.font-segoe-ui {
+    font-family: 'segoe ui';
+}
+
+body {
+    cursor: url('https://cdn.alfestofficial.com/img/logo-umum.png'), auto;
+}
+
+.bg-gray {
+    background-color: #d9d9d9;
+}
+
+.gallery {
+    margin: auto;
+    aspect-ration: 16/9;
+    min-height: 580px !important;
+    min-width: 920px !important;
+    height: 580px !important;
+    width: 920px !important;
+    max-height: 580px !important;
+    max-width: 920px !important;
+}
+
+#home {
+    background-image: url('/assets/img/sec_1_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* min-height: 100vh; */
+    /* height: 100vh; */
+    /* max-height: 100vh; */
+}
+
+#about {
+    /* padding-top: 40vh; */
+    background-image: url('/assets/img/sec_2_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 110vh;
+    /* height: 110vh; */
+    /* max-height: 110vh; */
+}
+
+.countdown {
+    font-size: 90px;
+}
+
+#days {
+    min-width: 200px;
+    width: 200px;
+    max-width: 200px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-image: url('/assets/img/days.png');
+    padding: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 260px;
+}
+
+#hours {
+    min-width: 200px;
+    width: 200px;
+    max-width: 200px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-image: url('/assets/img/hours.png');
+    padding: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 260px;
+}
+
+#minutes {
+    min-width: 200px;
+    width: 200px;
+    max-width: 200px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-image: url('/assets/img/minutes.png');
+    padding: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 260px;
+}
+
+#seconds {
+    min-width: 200px;
+    width: 200px;
+    max-width: 200px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-image: url('/assets/img/seconds.png');
+    padding: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 260px;
+}
+
+#timeline {
+    /* padding-top: 50px; */
+    background-image: url('/assets/img/sec_3_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: initial;
+    min-height: 2100px;
+    max-height: 2100px;
+}
+
+#gallery {
+    background-image: url('/assets/img/section4.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    /* height: 100vh; */
+    max-height: 1000vh;
+}
