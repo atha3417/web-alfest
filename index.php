@@ -29,7 +29,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body class="font-compote">
+<body class="font-compote text-white">
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container">
             <div class="col-6">
@@ -99,7 +99,7 @@
     <section class="overflow-hidden d-flex align-items-center" id="about">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-12 p-4">
+                <div class="col-lg-6 col-md-12 p-4 text-black">
                     <h2 class="fw-bold mb-4">WHAT IS ALFEST?</h2>
                     <p style="font-family: 'century gothic bold';">
                         ALFEST atau As-Syifa League Festival merupakan festival tahunan yang diselenggarakan oleh SMAIT AS-Syifa Boarding School Wanareja sejak tahun 2019.
@@ -126,25 +126,25 @@
                     <h2 class="fw-bold mb-4">OUR TIMELINE</h2>
                 </div>
                 <div>
-                    <img height="150px" src="/assets/img/1_open_registration.png" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+                    <img height="150px" src="./assets/img/1_open_registration.png" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
                 </div>
                 <div class="d-flex justify-content-end">
-                    <img height="150px" src="/assets/img/2_close_registration.png" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+                    <img height="150px" src="./assets/img/2_close_registration.png" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
                 </div>
                 <div>
-                    <img height="150px" src="/assets/img/3_technical_meeting.png" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+                    <img height="150px" src="./assets/img/3_technical_meeting.png" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
                 </div>
                 <div class="d-flex justify-content-end">
-                    <img height="150px" src="/assets/img/4_pengumpulan_karya.png" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+                    <img height="150px" src="./assets/img/4_pengumpulan_karya.png" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
                 </div>
                 <div>
-                    <img height="150px" src="/assets/img/5_grand_opening.png" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+                    <img height="150px" src="./assets/img/5_grand_opening.png" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
                 </div>
                 <div class="d-flex justify-content-end">
-                    <img height="150px" src="/assets/img/6_pelaksanaan_lomba.png" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+                    <img height="150px" src="./assets/img/6_pelaksanaan_lomba.png" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
                 </div>
                 <div>
-                    <img height="150px" src="/assets/img/7_grand_closing.png" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+                    <img height="150px" src="./assets/img/7_grand_closing.png" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
                 </div>
             </div>
         </div>
@@ -194,13 +194,13 @@
                 <div class="col-md-6 col-sm-12 mt-5">
                     <h4 class="fw-bold mb-4">SPONSORED BY</h4>
                     <div>
-                        <img src="/assets/img/sponsor.png" width="100%" alt="">
+                        <img src="./assets/img/sponsor.png" width="100%" alt="">
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12 mt-5">
                     <h4 class="fw-bold mb-4">SUPPORTED BY</h4>
                     <div>
-                        <img src="/assets/img/support.png" width="100%" alt="">
+                        <img src="./assets/img/support.png" width="100%" alt="">
                     </div>
                 </div>
                 <!--<div class="col-md-4 col-sm-12 mt-5">-->
@@ -215,25 +215,25 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-sm-6" id="contact">
-                    <h6 class="fw-bold mb-4">CONTACT US</h6>
+                    <h6 class="fw-bold text-white mb-4">CONTACT US</h6>
                     <div class="mt-1 font-segoe-ui">
-                        <a href="https://wa.me/6281379965900" class="d-block text-decoration-none text-black">
+                        <a href="https://wa.me/6281379965900" class="d-block text-decoration-none text-white">
                             <i class="fa-brands fa-whatsapp"></i>
                             <span>&nbsp;081379965900</span>
                         </a>
-                        <a href="https://wa.me/6282121333433" class="d-block text-decoration-none text-black">
+                        <a href="https://wa.me/6282121333433" class="d-block text-decoration-none text-white">
                             <i class="fa-brands fa-whatsapp"></i>
                             <span>&nbsp;082121333433</span>
                         </a>
-                        <a href="mailto:alfest.wanareja@gmail.com" class="d-block text-decoration-none text-black">
+                        <a href="mailto:alfest.wanareja@gmail.com" class="d-block text-decoration-none text-white">
                             <i class="fa-solid fa-envelope"></i>
                             <span>&nbsp;alfest.wanareja@gmail.com</span>
                         </a>
-                        <a href="mailto:officialalfest@gmail.com" class="d-block text-decoration-none text-black">
+                        <a href="mailto:officialalfest@gmail.com" class="d-block text-decoration-none text-white">
                             <i class="fa-solid fa-envelope"></i>
                             <span>&nbsp;officialalfest@gmail.com</span>
                         </a>
-                        <a href="mailto:humas.alfest23@gmail.com" class="d-block text-decoration-none text-black">
+                        <a href="mailto:humas.alfest23@gmail.com" class="d-block text-decoration-none text-white">
                             <i class="fa-solid fa-envelope"></i>
                             <span>&nbsp;humas.alfest23@gmail.com</span>
                         </a>
@@ -243,25 +243,25 @@
                     <img src="./assets/img/logo umum.png" alt="" width="25%" />
                 </div>
                 <div class="col-lg-3 col-sm-5 mt-4 mt-sm-0">
-                    <h6 class="fw-bold mb-4">FOLLOW US</h6>
+                    <h6 class="fw-bold mb-4 text-white">FOLLOW US</h6>
                     <div class="font-segoe-ui">
-                        <a href="https://instagram.com/alfestputra" class="d-block text-decoration-none text-black">
+                        <a href="https://instagram.com/alfestputra" class="d-block text-decoration-none text-white">
                             <i class="fa-brands fa-instagram"></i>
                             <span>&nbsp;@alfestputra</span>
                         </a>
-                        <a href="https://instagram.com/alfestputri" class="d-block text-decoration-none text-black">
+                        <a href="https://instagram.com/alfestputri" class="d-block text-decoration-none text-white">
                             <i class="fa-brands fa-instagram"></i>
                             <span>&nbsp;@alfestputri</span>
                         </a>
-                        <a href="https://m.youtube.com/c/AssyifaLFestival" class="d-block text-decoration-none text-black">
+                        <a href="https://m.youtube.com/c/AssyifaLFestival" class="d-block text-decoration-none text-white">
                             <i class="fa-brands fa-youtube"></i>
                             <span>&nbsp;Assyifa L. Festival</span>
                         </a>
-                        <a href="https://www.tiktok.com/@assyifaleaguefestival" class="d-block text-decoration-none text-black">
+                        <a href="https://www.tiktok.com/@assyifaleaguefestival" class="d-block text-decoration-none text-white">
                             <i class="fa-brands fa-tiktok"></i>
                             <span>&nbsp;@assyifaleaguefestival</span>
                         </a>
-                        <a href="https://twitter.com/official_alfest" class="d-block text-decoration-none text-black">
+                        <a href="https://twitter.com/official_alfest" class="d-block text-decoration-none text-white">
                             <i class="fa-brands fa-twitter"></i>
                             <span>&nbsp;@official_alfest</span>
                         </a>
@@ -275,7 +275,7 @@
     <section class="py-5 overflow-hidden" style="background-color: #6168e3;">
         <div class="container">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-8 text-white">
                     <h2 class="fw-bold mb-4">OUR LOCATION</h2>
                     <p>
                         Blok Lw. Peuris RT/RW 07/02, Wanareja, Kec. Subang,

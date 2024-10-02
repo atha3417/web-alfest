@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'compote free';
-    src: url('/assets/font/compotefree.ttf');
+    src: url('../../assets/font/compotefree.ttf');
 }
 
 @font-face {
     font-family: 'century gothic bold';
-    src: url('/assets/font/gothicb.ttf');
+    src: url('../../assets/font/gothicb.ttf');
 }
 
 .font-compote {
@@ -18,7 +18,7 @@
 }
 
 body {
-    cursor: url('https://cdn.alfestofficial.com/img/logo-umum.png'), auto;
+    /* cursor: url('https://cdn.alfestofficial.com/img/logo-umum.png'), auto; */
 }
 
 .bg-gray {
@@ -37,7 +37,7 @@ body {
 }
 
 #home {
-    background-image: url('/assets/img/sec_1_bg.png');
+    background-image: url('../../assets/img/sec_1_bg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -48,7 +48,7 @@ body {
 
 #about {
     /* padding-top: 40vh; */
-    background-image: url('/assets/img/sec_2_bg.png');
+    background-image: url('../../assets/img/sec_2_bg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -67,7 +67,7 @@ body {
     max-width: 200px;
     margin-top: auto;
     margin-bottom: auto;
-    background-image: url('/assets/img/days.png');
+    background-image: url('../../assets/img/days.png');
     padding: 60px;
     background-position: center;
     background-repeat: no-repeat;
@@ -80,7 +80,7 @@ body {
     max-width: 200px;
     margin-top: auto;
     margin-bottom: auto;
-    background-image: url('/assets/img/hours.png');
+    background-image: url('../../assets/img/hours.png');
     padding: 40px;
     background-position: center;
     background-repeat: no-repeat;
@@ -93,7 +93,7 @@ body {
     max-width: 200px;
     margin-top: auto;
     margin-bottom: auto;
-    background-image: url('/assets/img/minutes.png');
+    background-image: url('../../assets/img/minutes.png');
     padding: 50px;
     background-position: center;
     background-repeat: no-repeat;
@@ -106,7 +106,7 @@ body {
     max-width: 200px;
     margin-top: auto;
     margin-bottom: auto;
-    background-image: url('/assets/img/seconds.png');
+    background-image: url('../../assets/img/seconds.png');
     padding: 60px;
     background-position: center;
     background-repeat: no-repeat;
@@ -115,7 +115,7 @@ body {
 
 #timeline {
     /* padding-top: 50px; */
-    background-image: url('/assets/img/sec_3_bg.png');
+    background-image: url('../../assets/img/sec_3_bg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: initial;
@@ -124,7 +124,7 @@ body {
 }
 
 #gallery {
-    background-image: url('/assets/img/section4.jpg');
+    background-image: url('../../assets/img/section4.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
